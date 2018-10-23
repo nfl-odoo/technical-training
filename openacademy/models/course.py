@@ -3,6 +3,7 @@ from odoo import models, fields, api, exceptions, _
 
 class Course(models.Model):
     _name = 'openacademy.course'
+    _description = 'Course'
 
     name = fields.Char()
     description = fields.Text()
@@ -19,7 +20,8 @@ class Course(models.Model):
 
 class Session(models.Model):
     _name = 'openacademy.session'
-
+    _description = 'Session'
+    
     name = fields.Char(required=True)
     start_date = fields.Date(default=fields.Date.today)
     end_date = fields.Date(default=fields.Date.today)

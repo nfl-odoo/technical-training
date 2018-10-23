@@ -17,6 +17,7 @@ def floatime_to_hour_minute(f):
 
 class TaskType(models.Model):
     _name = 'coopplanning.task.type'
+    _description = 'coopplanning.task.type'
 
     name = fields.Char()
     description = fields.Text()
@@ -26,6 +27,7 @@ class TaskType(models.Model):
 
 class DayNumber(models.Model):
     _name = 'coopplanning.daynumber'
+    _description = 'coopplanning.daynumber'
 
     name = fields.Char()
     number = fields.Integer("Day Number", help="From 1 to N, When you will instanciate your planning, Day 1 will be the start date of the instance, Day 2 the second, etc...")
@@ -34,6 +36,7 @@ class DayNumber(models.Model):
 
 class TaskTemplate(models.Model):
     _name = 'coopplanning.task.template'
+    _description = 'coopplanning.task.template'
 
     name = fields.Char(required=True)
     day_nb_id = fields.Many2one('coopplanning.daynumber', string='Day')

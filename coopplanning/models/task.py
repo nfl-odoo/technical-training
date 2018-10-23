@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class Task(models.Model):
     _name = 'coopplanning.task'
+    _description = 'coopplanning.task'
 
     name = fields.Char()
     task_template_id = fields.Many2one('coopplanning.task.template')
